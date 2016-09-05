@@ -1,0 +1,114 @@
+/**first-container**/
+/**首页**/
+.f-container{
+	width:100%;
+	height:auto;
+}
+.f-container-top{
+	width:1200px;
+	height:460px;
+	margin:0 auto;
+	margin-top:25px;
+	position: relative;
+}
+.f-container-top  .fc-left{
+	width:150px;
+	height:460px;
+	position: relative;
+}
+
+.fc-left .fc-left-t{
+	width: 150px;
+	height:120px;
+	border-bottom:1px solid rgb(237,237,237);
+	padding-bottom: 30px;
+	margin-bottom: 15px;
+}
+
+.fc-left .fc-left-t h2{
+	height:24px;
+	line-height:24px;
+	margin-bottom: 15px;
+}
+.fc-left h2 a{
+	color:#000000;
+	font-size:16px;
+}
+
+.fc-left .fc-left-t ul li{
+	float:left;
+	margin-right:20px;
+	line-height: 1.8;
+}
+.fc-left .fc-left-t ul li a{
+	color:rgb(102,102,102)
+}
+.fc-left .fc-left-t ul li a:hover{
+	color:rgb(242,94,75)
+}
+
+
+.fc-left .fc-left-b{
+	width:150px;
+	height:335px;
+}
+.fc-left .fc-left-b h2{
+	height:24px;
+	line-height:24px;
+	margin-bottom: 15px;
+}
+.fc-left .fc-left-b li{
+	height:31px;
+	line-height: 31px;
+	font-size:14px;
+	
+}
+.fc-left .fc-left-b li.active{
+	color: #fff;
+	background: rgb(228,71,21);
+	
+}
+.fc-left .fc-left-b li.active a{
+	color:#fff;
+}
+.fc-left .fc-left-b li.active .erjimenu{
+	display: block;
+}
+.fc-left .fc-left-b li .erjimenu{
+	position: absolute;
+	top:0;
+	right:-164px;
+	width:164px;
+	height:460px;
+	padding:20px;
+	border:1px solid rgb(237,237,237);
+	z-index: 4;
+	background: rgba(228,71,21,0.3);
+	display: none;
+}
+.fc-left .fc-left-b li .erjimenu a{
+	display: block;
+	padding:0 10px;
+	font-size: 12px;
+	color:rgb(102,102,102);
+}
+
+.fc-left .fc-left-b span{
+	margin-left:15px;
+}
+.fc-left .fc-left-b li a{
+	margin-left: 7px;
+	color:rgb(102,102,102)
+}
+
+
+
+
+
+
+
+
+
+
+
+
