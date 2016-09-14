@@ -3,17 +3,75 @@
 	<head>
 		<meta charset="utf-8" />
 		<title>为爱用心定制: 创意个性礼品定制,创意生日礼物,创意礼物 - 卡当网</title>
-		<script src="js/jquery-2.1.0.js"></script>
+		<script src="js/jquery-1.11.3.js"></script>
 		<link rel="stylesheet" type="text/css" href="css/bootstrap.css"/>
 		<link rel="stylesheet" type="text/css" href="css/common.css"/>
 		<link rel="stylesheet" type="text/css" href="css/style.css"/>
-		<script src="js/common.js"></script>
 		<script type="text/javascript" src="js/bootstrap.min.js"></script>
-		<script src="js/jquery-2.1.0.js"></script>
+		<script src="js/jquery-1.11.3.js"></script>
 		<script src="js/home.js"></script>
-		
+		<script src="js/common.js"></script>
 	</head>
 	<body>
+<!--登录框--lay_out透明层-->	
+	<div class="lay_out"></div>
+	<div id="log_in">
+		<span class="login-close"></span>
+		<div class="log_main">
+			<div class="log_left">
+				<p class="title">无需注册</p>
+				<p class="explain">直接使用社交账号登录</p>
+				<ul>
+					<li><a href="javascript:;" title="新浪微博"><div style="background:url(img/login.png) no-repeat 0 0"></div><span>微博</span></a></li>
+					<li><a href="javascript:;" title="QQ登录"><div style="background:url(img/login.png) no-repeat 0 -69px"></div><span>QQ</span></a></li>
+					<li><a href="javascript:;" title="支付宝快捷登录"><div style="background:url(img/login.png) no-repeat 0 -138px"></div><span>支付宝</span></a></li>
+				</ul>
+			</div>
+			<div id="kd_login" class="log_right">
+				<p class="title">用户登录</p>
+				<div class="input_user">
+					<input class="txt" type="text" placeholder="邮箱/用户名" />
+					<label class="test_username"><i>邮箱/用户名不能为空</i></label>
+				</div>
+				<div class="input_pass">
+					<input class="pas" type="password" placeholder="密码" />	
+					<label class="test_password"><i>邮箱/用户名不能为空</i></label>
+				</div>
+				<div class="auto-login"><span class="case">下次自动登录</span></div>
+				<input class="btn" type="submit" value="立即登录" />
+				<p class="end-login">还没账号? <a class="register" id="reg-log">注册</a><span><a href="forget-password.html">忘记密码?</a></span></p>
+			</div>
+			
+			<div id="kd_register" class="register-right log_right">
+				<p class="title">用户注册</p>
+				<div class="input_user">
+					<input class="txt" type="text" placeholder="邮箱/用户名" />
+					<label class="test_em"><i> 邮件不能为空!</i></label>
+				</div>
+				<div class="input_pass">
+					<input class="pas" type="password" placeholder="密码" />	
+					<label class="test_em_pass"><i>密码不能为空!</i></label>
+				</div>	
+				<div class="auto-login"><span class="case">&#171;卡当注册协议&#187;</span></div>
+				<input class="btn" type="submit" value="同意协议并注册" />
+				<p class="end-login">已有账号? <a class="register" id="login-start">登录</a></p>
+			</div>
+		</div>
+		
+	</div>
+		<!-- 下侧固定定位-->
+		<div class="fix-nav">
+			<ul>
+				<li class='fix-gift'><a href="javascript:;" title="送礼问我" target="_blank"><span></span><p>送礼<br />问我</p></a> </li>
+				<li><span class='cook'></span><a id="shoucang" href="javascript:;" title="我的收藏" target="_blank">我的<br />收藏</a> </li>
+				<li><a href="javascript:;" title="我有话说" target="_blank">我有<br />话说</a> </li>
+				<li class="fix-weichat"><a href="javascript:;" title="APP下载" target="_blank"><span class="iconfont weichat">&#xe60e;</span></a> <div class="two-code"></div></li>
+				<li class="back_top"><a href="javascript:;" title="回到顶部" target="_blank"></a></li>
+				
+			</ul>
+		</div>
+
+		
 		<!--header-->
 		<div class="header">
 			<div class="container">
@@ -28,12 +86,32 @@
 					</div>
 					<div class="h-right">
 						<ul class="hr-container">
-							<li><a href="javascript:;" title="我的卡当">我的卡当</a><span class="iconfont">&#xe600;</span></li>
-							<li><span class="iconfont">&#xe602;</span><a href="javascript:;" title="购物车">购物车</a></li>
-							<li><span class="iconfont">&#xe601;</span><a href="javascript:;" title="手机版">手机版</a></li>
-							<li><a href="javascript:;" title="我的收藏">我的收藏</a><span class="iconfont">&#xe600;</span></li>
-							<li><a href="javascript:;" title="在线客服">在线客服</a></li>
-							<li><a href="javascript:;" title="收藏卡当网">收藏卡当网</a></li>
+							<li class="rorate_one">
+								<a href="javascript:;" title="我的卡当">我的卡当</a><span class="iconfont rorate">&#xe600;</span>
+								<div class="hr-first">
+									<a href="javascript:;" title="我的订单" target="_blank">我的订单</a>
+									<a href="javascript:;" title="我的优惠券" target="_blank">我的优惠券</a>
+								</div>
+							</li>
+							<li>
+								<span class="iconfont">&#xe602;</span><a href="javascript:;" title="购物车">购物车</a>
+								<div class="hr-second hr-first">
+									<a href="javascript:;" title="我的订单" target="_blank">您的购物车中暂无商品，赶快选择心爱的商品吧！</a>
+								</div>
+							</li>
+							<li style="border:none">
+								<span class="iconfont">&#xe601;</span><a href="javascript:;" title="手机版">手机版</a>
+								<div class="hr-first" style="width:148px; height:188px; background: url(img/qrcode.png) no-repeat ;position: absolute ;left:-50px;top:50px; border:none"></div>
+							</li>
+							<li class="rorate_one">
+								<a href="javascript:;" title="我的收藏">我的收藏</a><span class="iconfont rorate">&#xe600;</span>
+								<div class="hr-first">
+									<a href="javascript:;" title="收藏的商品" target="_blank">收藏的商品</a>
+									<a href="javascript:;" title="收藏的店铺" target="_blank">收藏的店铺</a>
+								</div>
+							</li>
+							<li style="border:none"><a href="javascript:;" title="在线客服">在线客服</a></li>
+							<li style="border:none"><a href="javascript:;" title="收藏卡当网">收藏卡当网</a></li>
 							
 						</ul>
 					</div>
@@ -44,8 +122,11 @@
 					<div class="hb-main">
 						<div class="hb-top">
 							
-								<input class="input-text" type="text" placeholder="七夕情人节送女朋友什么?"/>
-								<input class="input-button" type="submit" value=""/><a href="javascript:;"><span class="iconfont search">&#xe603;</span></a>	
+								<input id="text" class="input-text" type="text" placeholder="七夕情人节送女朋友什么?"/>
+								<input id="btn" class="input-button" type="submit" value=""/><a href="javascript:;"><span class="iconfont search">&#xe603;</span></a>	
+						</div>
+						<div id="list">
+							<li><a href="#"></a></li>
 						</div>
 						<div class="hb-tab">
 							<a href="javascript:;" target="_blank" title="送女朋友">送女朋友</a>	
@@ -62,7 +143,8 @@
 <div class="nav">
 	<div class="nav-main">
 		<ul>
-			<li class="hot"><a href="javascript:;" target="_blank" title="8/18-9/8号只接单不发货"><b>8/18-9/8号只接单不发货</b></a><span><img src="img/hot.jpg" </span></li>
+			<div class="bo-border"></div>
+			<li class="hot"><a href="side.html" target="_blank" title="8/18-9/8号只接单不发货"><b>8/18-9/8号只接单不发货</b></a><span><img src="img/hot.jpg" </span></li>
 			<li><a href="javascript:;" target="_blank" title="送女生"><b>送女生</b></a></li>
 			<li><a href="javascript:;" target="_blank" title="送男生"><b>送男生</b></a></li>
 			<li><a href="javascript:;" target="_blank" title="生日礼物"><b>生日礼物</b></a></li>
@@ -90,7 +172,7 @@
 			<div class="fc-left-b">
 				<h2><b><a href="javascript:;" target="_blank" title="全部礼物">全部礼物</a></b></h2>
 				<ul>
-					<li><span class="iconfont">&#xe608;</span><a href="javascript:;" target="_blank" title="时尚饰品">时尚饰品</a>
+					<li><span class="iconfont">&#xe608;</span><a href="javascript:;" target="_blank" title="时尚饰品">时尚饰品</a><i class="iconfont">&#xe60d;</i>
 						<div class="erjimenu">
 							<a href="javascript:;" target="_blank" title="项链">项链</a>
 							<a href="javascript:;" target="_blank" title="手链手镯">手链手镯</a>
@@ -100,16 +182,16 @@
 							<a href="javascript:;" target="_blank" title="男士饰品">男士饰品</a>
 							<a href="javascript:;" target="_blank" title="高档珠宝">高档珠宝</a>
 						</div></li>
-					<li><span class="iconfont">&#xe607;</span><a href="javascript:;" target="_blank" title="围巾配饰">围巾配饰</a>
-						<div class="erjimenu>
+					<li><span class="iconfont">&#xe607;</span><a href="javascript:;" target="_blank" title="围巾配饰">围巾配饰</a><i class="iconfont">&#xe60d;</i>
+						<div class="erjimenu">
 							
 							<a href="javascript:;" target="_blank" title="皮带">皮带</a>
 							<a href="javascript:;" target="_blank" title="钥匙扣">钥匙扣</a>
 							<a href="javascript:;" target="_blank" title="zippo/军刀">zippo/军刀</a>
 							<a href="javascript:;" target="_blank" title="梳子/化妆镜">梳子/化妆镜</a>
 						</div></li>
-					<li><span class="iconfont">&#xe60c;</span><a href="javascript:;" target="_blank" title="创意摆件">创意摆件</a>
-						<div class="erjimenu>
+					<li><span class="iconfont">&#xe60c;</span><a href="javascript:;" target="_blank" title="创意摆件">创意摆件</a><i class="iconfont">&#xe60d;</i>
+						<div class="erjimenu">
 							<a href="javascript:;" target="_blank" title="围巾/手套">围巾/手套</a>
 							<a href="javascript:;" target="_blank" title="钱包/背包">钱包/背包</a>
 							<a href="javascript:;" target="_blank" title="手表">手表</a>
@@ -117,8 +199,8 @@
 							<a href="javascript:;" target="_blank" title="钥匙扣">钥匙扣</a>
 							
 						</div></li>
-					<li><span class="iconfont">&#xe60a;</span><a href="javascript:;" target="_blank" title="布艺家纺">布艺家纺</a>
-						<div class="erjimenu>
+					<li><span class="iconfont">&#xe60a;</span><a href="javascript:;" target="_blank" title="布艺家纺">布艺家纺</a><i class="iconfont">&#xe60d;</i>
+						<div class="erjimenu">
 							<a href="javascript:;" target="_blank" title="围巾/手套">围巾/手套</a>
 							<a href="javascript:;" target="_blank" title="钱包/背包">钱包/背包</a>
 							<a href="javascript:;" target="_blank" title="手表">手表</a>
@@ -127,18 +209,18 @@
 							<a href="javascript:;" target="_blank" title="zippo/军刀">zippo/军刀</a>
 							<a href="javascript:;" target="_blank" title="梳子/化妆镜">梳子/化妆镜</a>
 						</div></li>
-					<li><span class="iconfont">&#xe609;</span><a href="javascript:;" target="_blank" title="花/巧克力">花/巧克力</a>
-						<div class="erjimenu>
-							<a href="javascript:;" target="_blank" title="围巾/手套">围巾/手套</a>
+					<li><span class="iconfont">&#xe609;</span><a href="javascript:;" target="_blank" title="花/巧克力">花/巧克力</a><i class="iconfont">&#xe60d;</i>
+						<div class="erjimenu">
+							
 							<a href="javascript:;" target="_blank" title="钱包/背包">钱包/背包</a>
 							<a href="javascript:;" target="_blank" title="手表">手表</a>
 							<a href="javascript:;" target="_blank" title="皮带">皮带</a>
-							<a href="javascript:;" target="_blank" title="钥匙扣">钥匙扣</a>
+							
 							<a href="javascript:;" target="_blank" title="zippo/军刀">zippo/军刀</a>
 							<a href="javascript:;" target="_blank" title="梳子/化妆镜">梳子/化妆镜</a>
 						</div></li>
-					<li><span class="iconfont">&#xe606;</span><a href="javascript:;" target="_blank" title="家居日用">家居日用</a>
-						<div class="erjimenu>
+					<li><span class="iconfont">&#xe606;</span><a href="javascript:;" target="_blank" title="家居日用">家居日用</a><i class="iconfont">&#xe60d;</i>
+						<div class="erjimenu">
 							<a href="javascript:;" target="_blank" title="围巾/手套">围巾/手套</a>
 							<a href="javascript:;" target="_blank" title="钱包/背包">钱包/背包</a>
 							<a href="javascript:;" target="_blank" title="手表">手表</a>
@@ -148,31 +230,29 @@
 							<a href="javascript:;" target="_blank" title="梳子/化妆镜">梳子/化妆镜</a>
 						</div>
 					</li>
-					<li><span class="iconfont">&#xe605;</span><a href="javascript:;" target="_blank" title="数码办公">数码办公</a>
-						<div class="erjimenu>
+					<li><span class="iconfont">&#xe605;</span><a href="javascript:;" target="_blank" title="数码办公">数码办公</a><i class="iconfont">&#xe60d;</i>
+						<div class="erjimenu">
+							<a href="javascript:;" target="_blank" title="zippo/军刀">zippo/军刀</a>
+							<a href="javascript:;" target="_blank" title="梳子/化妆镜">梳子/化妆镜</a>
 							<a href="javascript:;" target="_blank" title="围巾/手套">围巾/手套</a>
 							<a href="javascript:;" target="_blank" title="钱包/背包">钱包/背包</a>
 							<a href="javascript:;" target="_blank" title="手表">手表</a>
 							<a href="javascript:;" target="_blank" title="皮带">皮带</a>
 							<a href="javascript:;" target="_blank" title="钥匙扣">钥匙扣</a>
-							<a href="javascript:;" target="_blank" title="zippo/军刀">zippo/军刀</a>
-							<a href="javascript:;" target="_blank" title="梳子/化妆镜">梳子/化妆镜</a>
+							
 						</div>
 					</li>
-					<li><span class="iconfont">&#xe60b;</span><a href="javascript:;" target="_blank" title="照片印刷">照片印刷</a>
-						<div class="erjimenu>
+					<li><span class="iconfont">&#xe60b;</span><a href="javascript:;" target="_blank" title="照片印刷">照片印刷</a><i class="iconfont">&#xe60d;</i>
+						<div class="erjimenu">
 							<a href="javascript:;" target="_blank" title="围巾/手套">围巾/手套</a>
 							<a href="javascript:;" target="_blank" title="钱包/背包">钱包/背包</a>
 							<a href="javascript:;" target="_blank" title="手表">手表</a>
 							<a href="javascript:;" target="_blank" title="皮带">皮带</a>
 							<a href="javascript:;" target="_blank" title="钥匙扣">钥匙扣</a>
-							<a href="javascript:;" target="_blank" title="zippo/军刀">zippo/军刀</a>
-							<a href="javascript:;" target="_blank" title="梳子/化妆镜">梳子/化妆镜</a>
 						</div>
 					</li>
-					<li><span class="iconfont">&#xe604;</span><a href="javascript:;" target="_blank" title="服装内衣">服装内衣</a>
-						<div class="erjimenu>
-							<a href="javascript:;" target="_blank" title="围巾/手套">围巾/手套</a>
+					<li><span class="iconfont">&#xe604;</span><a href="javascript:;" target="_blank" title="服装内衣">服装内衣</a><i class="iconfont">&#xe60d;</i>
+						<div class="erjimenu">
 							<a href="javascript:;" target="_blank" title="钱包/背包">钱包/背包</a>
 							<a href="javascript:;" target="_blank" title="手表">手表</a>
 							<a href="javascript:;" target="_blank" title="皮带">皮带</a>
@@ -183,31 +263,765 @@
 					</li>	
 				</ul>
 			</div>
-			
-			
 		</div>
-		
-		<div class="fc-mid"></div>
-		<div class="fc-right"></div>
+<!--轮播图banner-->		
+		<div id="fc-mid">
+			<ul class="lunbo">
+				<li><a href="#"><img src="img/banner1.jpg" title="生日-用心" alt=""/></a> </li>
+				<li><a href="#"><img src="img/banner2.jpg" title="礼物榜" alt=""/></a> </li>
+				<li><a href="#"><img src="img/banner3.jpg" title="钱包" alt=""/></a> </li>
+				<li><a href="#"><img src="img/banner4.jpg" title="爱心型项链" alt=""/></a> </li>
+			</ul>
+			<ul class="bottom">
+				<li><a href="javascript:;"></a></li>
+				<li><a href="javascript:;"></a></li>
+				<li><a href="javascript:;"></a></li>
+				<li><a href="javascript:;"></a></li>
+			</ul>
+			<div class="prev btn"></div>
+			<div class="next btn"></div>
+		</div>
+		<div id="fc-right">
+			<p class="mod-above"><a href="javascript:;"><img src="img/lovebs.jpg" title="托帕石" alt="托帕石"/></a></p>
+			<p class="mod-blow"><a href="javascript:;"><img src="img/love-music.jpg" title="音乐盒" alt="音乐盒" /></a></p>
+		</div>
 	</div>
-	<div class="f-container-mid"></div>
+	<div id="f-container-mid">
+		<h2><b>爆款推荐</b><span>买过的都说不错,销量高评价好,买个放心,再定制一下自己的心意那就完美了</span></h2>
+		<ul id="hotest">
+			<li>
+				<a href="javascript" title="情侣秀恩爱手链" ><img src="img/mid-hot1.jpg"/></a>
+				<img class="side-header" src="img/icon_04.png"/>
+				<span>￥<b>179.00</b><a href=""">13人购买</a></span>
+				<p><a href="javascript:;" title="情侣秀恩爱手链">情侣秀恩爱手链</a></p>
+			</li>
+			<li>
+				<a href="javascript" title="情侣秀恩爱手链" ><img src="img/mid-hot2.jpg"/></a>
+				<img class="side-header" src="img/icon_04.png"/>
+				<span>￥<b>179.00</b><a href=""">13人购买</a></span>
+				<p><a href="javascript:;" title="情侣秀恩爱手链">情侣秀恩爱手链</a></p>
+			</li>
+			<li>
+				<a href="javascript" title="情侣秀恩爱手链" ><img src="img/mid-hot3.jpg"/></a>
+				<img class="side-header" src="img/icon_04.png"/>
+				<span>￥<b>179.00</b><a href=""">13人购买</a></span>
+				<p><a href="javascript:;" title="情侣秀恩爱手链">情侣秀恩爱手链</a></p>
+			</li>
+			<li>
+				<a href="javascript" title="情侣秀恩爱手链" ><img src="img/mid-hot4.jpg"/></a>
+				<img class="side-header" src="img/icon_04.png"/>
+				<span>￥<b>179.00</b><a href=""">13人购买</a></span>
+				<p><a href="javascript:;" title="情侣秀恩爱手链">情侣秀恩爱手链</a></p>
+			</li>
+			<li>
+				<a href="javascript" title="情侣秀恩爱手链" ><img src="img/mid-hot5.jpg"/></a>
+				<img class="side-header" src="img/icon_04.png"/>
+				<span>￥<b>179.00</b><a href=""">13人购买</a></span>
+				<p><a href="javascript:;" title="情侣秀恩爱手链">情侣秀恩爱手链</a></p>
+			</li>
+			<li>
+				<a href="javascript" title="情侣秀恩爱手链" ><img src="img/mid-hot6.jpg"/></a>
+				<img class="side-header" src="img/icon_04.png"/>
+				<span>￥<b>179.00</b><a href=""">13人购买</a></span>
+				<p><a href="javascript:;" title="情侣秀恩爱手链">情侣秀恩爱手链</a></p>
+			</li>
+			<li>
+				<a href="javascript" title="情侣秀恩爱手链" ><img src="img/mid-hot7.jpg"/></a>
+				<img class="side-header" src="img/icon_04.png"/>
+				<span>￥<b>179.00</b><a href=""">13人购买</a></span>
+				<p><a href="javascript:;" title="情侣秀恩爱手链">情侣秀恩爱手链</a></p>
+			</li>
+			<li>
+				<a href="javascript" title="情侣秀恩爱手链"><img src="img/mid-hot8.jpg"/></a>
+				<img class="side-header" src="img/icon_04.png"/>
+				<span>￥<b>179.00</b><a href=""">13人购买</a></span>
+				<p><a href="javascript:;" title="情侣秀恩爱手链">情侣秀恩爱手链</a></p>
+			</li>
+			
+		</ul>
+	</div>
+	<div id="f-container-bottom">
+		<a href="#"><img src="img/tebiemei1.jpg" title="七夕大banner" alt=""/></a>
+		<a href="#"><img class='lovebg' src="img/lovebs.jpg" title="爱心项链" alt=""></a>
+	</div>
 	
+</div>
+<!--楼层开始-->
+<div id="subnav">
+	<ul>
+		<li><a class="first" href="javascript:;" target="_blank" title="生日礼物">生日礼物</a></li>
+		<li><a href="javascript:;" target="_blank" title="本周新品">本周新品</a></li>
+		<li><a href="javascript:;" target="_blank" title="送女友礼物">送女友礼物</a></li>
+		<li><a href="javascript:;" target="_blank" title="送男友礼物">送男友礼物</a></li>
+		<li><a href="javascript:;" target="_blank" title="成双成对礼物">成双成对礼物</a></li>
+	</ul>
+</div>
+<!--楼层导航-->
+<div id="floor-nav">
+	<ul>
+		<li><a href="javascript:;" target="_blank" title="生日礼物" >生日礼物</a></li>
+		<li><a href="javascript:;" target="_blank" title="本周新品">本周新品</a></li>
+		<li><a href="javascript:;" target="_blank"送女友礼物">送女友礼物</a></li>
+		<li><a href="javascript:;" target="_blank" title="送男友礼物">送男友礼物</a></li>
+		<li><a href="javascript:;" target="_blank" title="成双成对礼物">成双成对礼物</a></li>
+	</ul>
 </div>
 
 
 
 
+<div id="floor">
+	<div id="first-floor" class="f-first">
+		<h3><a href="javascript:;"><b>生日礼物</b></a></h3>
+		<ul>
+			<li class="cake"><a href="javascript:;" target="_blank" title="大图3465蛋糕"><img src="img/floor1.jpg" /></a></li>
+			<li>
+				<a href="javascript" title="情侣秀恩爱手链"><img src="img/floor2.jpg"/></a>
+				<img class="side-header" src="img/icon_04.png"/>
+				<s></s>
+				<span>￥<b>139.00</b><a href="#">8673条评价</a></span>
+				<p>海洋之心925纯银项链采用施华洛世奇元素水晶经典爆款</p>
+			</li>
+			<li>
+				<a href="javascript" title="情侣秀恩爱手链"><img src="img/floor3.jpg"/></a>
+				<img class="side-header" src="img/icon_04.png"/>
+				<s>￥399.00</s>
+				<span>￥<b>139.00</b><a href=""">8673条评价</a></span>
+				<p>海洋之心925纯银项链采用施华洛世奇元素水晶经典爆款</p>
+			</li>
+			<li>
+				<a href="javascript" title="情侣秀恩爱手链"><img src="img/floor4.jpg"/></a>
+				<img class="side-header" src="img/icon_04.png"/>
+				<s></s>
+				<span>￥<b>139.00</b><a href=""">8673条评价</s></span>
+				<p>海洋之心925纯银项链采用施华洛世奇元素水晶经典爆款</p>
+			</li>
+			<li>
+				<a href="javascript" title="情侣秀恩爱手链"><img src="img/floor5.jpg"/></a>
+				<img class="side-header" src="img/icon_04.png"/>
+				<s></s>
+				<span>￥<b>139.00</b><a href=""">8673条评价</a></span>
+				<p>海洋之心925纯银项链采用施华洛世奇元素水晶经典爆款</p>
+			</li>
+			<li>
+				<a href="javascript" title="情侣秀恩爱手链"><img src="img/floor6.jpg"/></a>
+				<img class="side-header" src="img/icon_04.png"/>
+				<s></s>
+				<span>￥<b>139.00</b><a href=""">8673条评价</a></span>
+				<p>海洋之心925纯银项链采用施华洛世奇元素水晶经典爆款</p>
+			</li>
+			<li>
+				<a href="javascript" title="情侣秀恩爱手链"><img src="img/floor7.jpg"/></a>
+				<img class="side-header" src="img/icon_04.png"/>
+				<s></s>
+				<span>￥<b>139.00</b><a href=""">8673条评价</a></span>
+				<p>海洋之心925纯银项链采用施华洛世奇元素水晶经典爆款</p>
+			</li>
+			<li>
+				<a href="javascript" title="情侣秀恩爱手链"><img src="img/floor8.jpg"/></a>
+				<img class="side-header" src="img/icon_04.png"/>
+				<s></s>
+				<span>￥<b>139.00</b><a href=""">8673条评价</a></span>
+				<p>海洋之心925纯银项链采用施华洛世奇元素水晶经典爆款</p>
+			</li>
+			<li>
+				<a href="javascript" title="情侣秀恩爱手链"><img src="img/floor4.jpg"/></a>
+				<img class="side-header" src="img/icon_04.png"/>
+				<s></s>
+				<span>￥<b>139.00</b><a href=""">8673条评价</a></span>
+				<p>海洋之心925纯银项链采用施华洛世奇元素水晶经典爆款</p>
+			</li>
+			<li>
+				<a href="javascript" title="情侣秀恩爱手链"><img src="img/floor2.jpg"/></a>
+				<img class="side-header" src="img/icon_04.png"/>
+				<s></s>
+				<span>￥<b>139.00</b><a href=""">8673条评价</a></span>
+				<p>海洋之心925纯银项链采用施华洛世奇元素水晶经典爆款</p>
+			</li>
+			
+			
+		</ul>
+	</div>
+	<div id="second-floor" class="f-first">
+		<h3><a href="javascript:;"><b>本周新品</b></a></h3>
+		<ul>
+			<li class="cake"><a href="javascript:;" target="_blank" title="大图3465蛋糕"><img src="img/floor1.jpg" /></a></li>
+			<li>
+				<a href="javascript" title="情侣秀恩爱手链"><img src="img/floor2.jpg"/></a>
+				<img class="side-header" src="img/icon_04.png"/>
+				<s></s>
+				<span>￥<b>139.00</b><a href="#">8673条评价</a></span>
+				<p>海洋之心925纯银项链采用施华洛世奇元素水晶经典爆款</p>
+			</li>
+			<li>
+				<a href="javascript" title="情侣秀恩爱手链"><img src="img/floor3.jpg"/></a>
+				<img class="side-header" src="img/icon_04.png"/>
+				<s>￥399.00</s>
+				<span>￥<b>139.00</b><a href=""">8673条评价</a></span>
+				<p>海洋之心925纯银项链采用施华洛世奇元素水晶经典爆款</p>
+			</li>
+			<li>
+				<a href="javascript" title="情侣秀恩爱手链"><img src="img/floor4.jpg"/></a>
+				<img class="side-header" src="img/icon_04.png"/>
+				<s></s>
+				<span>￥<b>139.00</b><a href=""">8673条评价</s></span>
+				<p>海洋之心925纯银项链采用施华洛世奇元素水晶经典爆款</p>
+			</li>
+			<li>
+				<a href="javascript" title="情侣秀恩爱手链"><img src="img/floor5.jpg"/></a>
+				<img class="side-header" src="img/icon_04.png"/>
+				<s></s>
+				<span>￥<b>139.00</b><a href=""">8673条评价</a></span>
+				<p>海洋之心925纯银项链采用施华洛世奇元素水晶经典爆款</p>
+			</li>
+			<li>
+				<a href="javascript" title="情侣秀恩爱手链"><img src="img/floor6.jpg"/></a>
+				<img class="side-header" src="img/icon_04.png"/>
+				<s></s>
+				<span>￥<b>139.00</b><a href=""">8673条评价</a></span>
+				<p>海洋之心925纯银项链采用施华洛世奇元素水晶经典爆款</p>
+			</li>
+			<li>
+				<a href="javascript" title="情侣秀恩爱手链"><img src="img/floor7.jpg"/></a>
+				<img class="side-header" src="img/icon_04.png"/>
+				<s></s>
+				<span>￥<b>139.00</b><a href=""">8673条评价</a></span>
+				<p>海洋之心925纯银项链采用施华洛世奇元素水晶经典爆款</p>
+			</li>
+			<li>
+				<a href="javascript" title="情侣秀恩爱手链"><img src="img/floor8.jpg"/></a>
+				<img class="side-header" src="img/icon_04.png"/>
+				<s></s>
+				<span>￥<b>139.00</b><a href=""">8673条评价</a></span>
+				<p>海洋之心925纯银项链采用施华洛世奇元素水晶经典爆款</p>
+			</li>
+			<li>
+				<a href="javascript" title="情侣秀恩爱手链"><img src="img/floor4.jpg"/></a>
+				<img class="side-header" src="img/icon_04.png"/>
+				<s></s>
+				<span>￥<b>139.00</b><a href=""">8673条评价</a></span>
+				<p>海洋之心925纯银项链采用施华洛世奇元素水晶经典爆款</p>
+			</li>
+			<li>
+				<a href="javascript" title="情侣秀恩爱手链"><img src="img/floor2.jpg"/></a>
+				<img class="side-header" src="img/icon_04.png"/>
+				<s></s>
+				<span>￥<b>139.00</b><a href=""">8673条评价</a></span>
+				<p>海洋之心925纯银项链采用施华洛世奇元素水晶经典爆款</p>
+			</li>
+			
+			
+		</ul>
+	</div>
+	<div id="third-floor" class="f-first">
+		<h3><a href="javascript:;"><b>送女友礼物</b></a></h3>
+		<ul>
+			<li class="cake"><a href="javascript:;" target="_blank" title="大图3465蛋糕"><img src="img/floor1.jpg" /></a></li>
+			<li>
+				<a href="javascript" title="情侣秀恩爱手链"><img src="img/floor2.jpg"/></a>
+				<img class="side-header" src="img/icon_04.png"/>
+				<s></s>
+				<span>￥<b>139.00</b><a href="#">8673条评价</a></span>
+				<p>海洋之心925纯银项链采用施华洛世奇元素水晶经典爆款</p>
+			</li>
+			<li>
+				<a href="javascript" title="情侣秀恩爱手链"><img src="img/floor3.jpg"/></a>
+				<img class="side-header" src="img/icon_04.png"/>
+				<s>￥399.00</s>
+				<span>￥<b>139.00</b><a href=""">8673条评价</a></span>
+				<p>海洋之心925纯银项链采用施华洛世奇元素水晶经典爆款</p>
+			</li>
+			<li>
+				<a href="javascript" title="情侣秀恩爱手链"><img src="img/floor4.jpg"/></a>
+				<img class="side-header" src="img/icon_04.png"/>
+				<s></s>
+				<span>￥<b>139.00</b><a href=""">8673条评价</s></span>
+				<p>海洋之心925纯银项链采用施华洛世奇元素水晶经典爆款</p>
+			</li>
+			<li>
+				<a href="javascript" title="情侣秀恩爱手链"><img src="img/floor5.jpg"/></a>
+				<img class="side-header" src="img/icon_04.png"/>
+				<s></s>
+				<span>￥<b>139.00</b><a href=""">8673条评价</a></span>
+				<p>海洋之心925纯银项链采用施华洛世奇元素水晶经典爆款</p>
+			</li>
+			<li>
+				<a href="javascript" title="情侣秀恩爱手链"><img src="img/floor6.jpg"/></a>
+				<img class="side-header" src="img/icon_04.png"/>
+				<s></s>
+				<span>￥<b>139.00</b><a href=""">8673条评价</a></span>
+				<p>海洋之心925纯银项链采用施华洛世奇元素水晶经典爆款</p>
+			</li>
+			<li>
+				<a href="javascript" title="情侣秀恩爱手链"><img src="img/floor7.jpg"/></a>
+				<img class="side-header" src="img/icon_04.png"/>
+				<s></s>
+				<span>￥<b>139.00</b><a href=""">8673条评价</a></span>
+				<p>海洋之心925纯银项链采用施华洛世奇元素水晶经典爆款</p>
+			</li>
+			<li>
+				<a href="javascript" title="情侣秀恩爱手链"><img src="img/floor8.jpg"/></a>
+				<img class="side-header" src="img/icon_04.png"/>
+				<s></s>
+				<span>￥<b>139.00</b><a href=""">8673条评价</a></span>
+				<p>海洋之心925纯银项链采用施华洛世奇元素水晶经典爆款</p>
+			</li>
+			<li>
+				<a href="javascript" title="情侣秀恩爱手链"><img src="img/floor4.jpg"/></a>
+				<img class="side-header" src="img/icon_04.png"/>
+				<s></s>
+				<span>￥<b>139.00</b><a href=""">8673条评价</a></span>
+				<p>海洋之心925纯银项链采用施华洛世奇元素水晶经典爆款</p>
+			</li>
+			<li>
+				<a href="javascript" title="情侣秀恩爱手链"><img src="img/floor2.jpg"/></a>
+				<img class="side-header" src="img/icon_04.png"/>
+				<s></s>
+				<span>￥<b>139.00</b><a href=""">8673条评价</a></span>
+				<p>海洋之心925纯银项链采用施华洛世奇元素水晶经典爆款</p>
+			</li>
+			
+			
+		</ul>
+	</div>
+	<div id="forth-floor" class="f-first">
+		<h3><a href="javascript:;"><b>送男友礼物</b></a></h3>
+		<ul>
+			<li class="cake"><a href="javascript:;" target="_blank" title="大图3465蛋糕"><img src="img/floor1.jpg" /></a></li>
+			<li>
+				<a href="javascript" title="情侣秀恩爱手链"><img src="img/floor2.jpg"/></a>
+				<img class="side-header" src="img/icon_04.png"/>
+				<s></s>
+				<span>￥<b>139.00</b><a href="#">8673条评价</a></span>
+				<p>海洋之心925纯银项链采用施华洛世奇元素水晶经典爆款</p>
+			</li>
+			<li>
+				<a href="javascript" title="情侣秀恩爱手链"><img src="img/floor3.jpg"/></a>
+				<img class="side-header" src="img/icon_04.png"/>
+				<s>￥399.00</s>
+				<span>￥<b>139.00</b><a href=""">8673条评价</a></span>
+				<p>海洋之心925纯银项链采用施华洛世奇元素水晶经典爆款</p>
+			</li>
+			<li>
+				<a href="javascript" title="情侣秀恩爱手链"><img src="img/floor4.jpg"/></a>
+				<img class="side-header" src="img/icon_04.png"/>
+				<s></s>
+				<span>￥<b>139.00</b><a href=""">8673条评价</s></span>
+				<p>海洋之心925纯银项链采用施华洛世奇元素水晶经典爆款</p>
+			</li>
+			<li>
+				<a href="javascript" title="情侣秀恩爱手链"><img src="img/floor5.jpg"/></a>
+				<img class="side-header" src="img/icon_04.png"/>
+				<s></s>
+				<span>￥<b>139.00</b><a href=""">8673条评价</a></span>
+				<p>海洋之心925纯银项链采用施华洛世奇元素水晶经典爆款</p>
+			</li>
+			<li>
+				<a href="javascript" title="情侣秀恩爱手链"><img src="img/floor6.jpg"/></a>
+				<img class="side-header" src="img/icon_04.png"/>
+				<s></s>
+				<span>￥<b>139.00</b><a href=""">8673条评价</a></span>
+				<p>海洋之心925纯银项链采用施华洛世奇元素水晶经典爆款</p>
+			</li>
+			<li>
+				<a href="javascript" title="情侣秀恩爱手链"><img src="img/floor7.jpg"/></a>
+				<img class="side-header" src="img/icon_04.png"/>
+				<s></s>
+				<span>￥<b>139.00</b><a href=""">8673条评价</a></span>
+				<p>海洋之心925纯银项链采用施华洛世奇元素水晶经典爆款</p>
+			</li>
+			<li>
+				<a href="javascript" title="情侣秀恩爱手链"><img src="img/floor8.jpg"/></a>
+				<img class="side-header" src="img/icon_04.png"/>
+				<s></s>
+				<span>￥<b>139.00</b><a href=""">8673条评价</a></span>
+				<p>海洋之心925纯银项链采用施华洛世奇元素水晶经典爆款</p>
+			</li>
+			<li>
+				<a href="javascript" title="情侣秀恩爱手链"><img src="img/floor4.jpg"/></a>
+				<img class="side-header" src="img/icon_04.png"/>
+				<s></s>
+				<span>￥<b>139.00</b><a href=""">8673条评价</a></span>
+				<p>海洋之心925纯银项链采用施华洛世奇元素水晶经典爆款</p>
+			</li>
+			<li>
+				<a href="javascript" title="情侣秀恩爱手链"><img src="img/floor2.jpg"/></a>
+				<img class="side-header" src="img/icon_04.png"/>
+				<s></s>
+				<span>￥<b>139.00</b><a href=""">8673条评价</a></span>
+				<p>海洋之心925纯银项链采用施华洛世奇元素水晶经典爆款</p>
+			</li>
+			
+			
+		</ul>
+	</div>
+	<div id="fifth-floor" class="f-first">
+		<h3><a href="javascript:;"><b>成双成对礼物</b></a></h3>
+		<ul>
+			<li class="cake"><a href="javascript:;" target="_blank" title="大图3465蛋糕"><img src="img/floor1.jpg" /></a></li>
+			<li>
+				<a href="javascript" title="情侣秀恩爱手链"><img src="img/floor2.jpg"/></a>
+				<img class="side-header" src="img/icon_04.png"/>
+				<s></s>
+				<span>￥<b>139.00</b><a href="#">8673条评价</a></span>
+				<p>海洋之心925纯银项链采用施华洛世奇元素水晶经典爆款</p>
+			</li>
+			<li>
+				<a href="javascript" title="情侣秀恩爱手链"><img src="img/floor3.jpg"/></a>
+				<img class="side-header" src="img/icon_04.png"/>
+				<s>￥399.00</s>
+				<span>￥<b>139.00</b><a href=""">8673条评价</a></span>
+				<p>海洋之心925纯银项链采用施华洛世奇元素水晶经典爆款</p>
+			</li>
+			<li>
+				<a href="javascript" title="情侣秀恩爱手链"><img src="img/floor4.jpg"/></a>
+				<img class="side-header" src="img/icon_04.png"/>
+				<s></s>
+				<span>￥<b>139.00</b><a href=""">8673条评价</s></span>
+				<p>海洋之心925纯银项链采用施华洛世奇元素水晶经典爆款</p>
+			</li>
+			<li>
+				<a href="javascript" title="情侣秀恩爱手链"><img src="img/floor5.jpg"/></a>
+				<img class="side-header" src="img/icon_04.png"/>
+				<s></s>
+				<span>￥<b>139.00</b><a href=""">8673条评价</a></span>
+				<p>海洋之心925纯银项链采用施华洛世奇元素水晶经典爆款</p>
+			</li>
+			<li>
+				<a href="javascript" title="情侣秀恩爱手链"><img src="img/floor6.jpg"/></a>
+				<img class="side-header" src="img/icon_04.png"/>
+				<s></s>
+				<span>￥<b>139.00</b><a href=""">8673条评价</a></span>
+				<p>海洋之心925纯银项链采用施华洛世奇元素水晶经典爆款</p>
+			</li>
+			<li>
+				<a href="javascript" title="情侣秀恩爱手链"><img src="img/floor7.jpg"/></a>
+				<img class="side-header" src="img/icon_04.png"/>
+				<s></s>
+				<span>￥<b>139.00</b><a href=""">8673条评价</a></span>
+				<p>海洋之心925纯银项链采用施华洛世奇元素水晶经典爆款</p>
+			</li>
+			<li>
+				<a href="javascript" title="情侣秀恩爱手链"><img src="img/floor8.jpg"/></a>
+				<img class="side-header" src="img/icon_04.png"/>
+				<s></s>
+				<span>￥<b>139.00</b><a href=""">8673条评价</a></span>
+				<p>海洋之心925纯银项链采用施华洛世奇元素水晶经典爆款</p>
+			</li>
+			<li>
+				<a href="javascript" title="情侣秀恩爱手链"><img src="img/floor4.jpg"/></a>
+				<img class="side-header" src="img/icon_04.png"/>
+				<s></s>
+				<span>￥<b>139.00</b><a href=""">8673条评价</a></span>
+				<p>海洋之心925纯银项链采用施华洛世奇元素水晶经典爆款</p>
+			</li>
+			<li>
+				<a href="javascript" title="情侣秀恩爱手链"><img src="img/floor2.jpg"/></a>
+				<img class="side-header" src="img/icon_04.png"/>
+				<s></s>
+				<span>￥<b>139.00</b><a href=""">8673条评价</a></span>
+				<p>海洋之心925纯银项链采用施华洛世奇元素水晶经典爆款</p>
+			</li>
+			
+			
+		</ul>
+	</div>
+<!--giftClassify-->
 
+	<div id="giftClassify">
+		<div class="gift-left">
+			<p>按兴趣选礼物</p>
+			<div class="gl-header">
+				<h3><a href="javascript:;" title="礼物送给谁" target="_blank">礼物送给谁</a></h3>
+				<div class="cont">
+					<a href="javascript:;" title="送普通朋友" target="_blank">送普通朋友</a>
+					<a href="javascript:;" title="送心仪/暗恋对象" target="_blank">送心仪/暗恋对象</a>
+					<a href="javascript:;" title="送女朋友/老婆" target="_blank">送女朋友/老婆</a>
+					<a href="javascript:;" title="送男盆友/老公" target="_blank">送男盆友/老公</a>
+					<a href="javascript:;" title="送情侣" target="_blank">送情侣</a>
+					
+				</div>
+			</div>
+			<div class="gl-header">
+				<h3><a href="javascript:;" title="收礼人个性" target="_blank">收礼人个性</a></h3>
+				<div class="cont">
+					<a href="javascript:;" title="送普通朋友" target="_blank">送普通朋友</a>
+					<a href="javascript:;" title="送心仪/暗恋对象" target="_blank">送心仪/暗恋对象</a>
+					<a href="javascript:;" title="送女朋友/老婆" target="_blank">送女朋友/老婆</a>
+					<a href="javascript:;" title="送男盆友/老公" target="_blank">送男盆友/老公</a>
+					<a href="javascript:;" title="送情侣" target="_blank">送情侣</a>
+					
+				</div>
+			</div>
+			<div class="gl-header">
+				<h3><a href="javascript:;" title="礼物价格" target="_blank">礼物价格</a></h3>
+				<div class="cont">
+					<a href="javascript:;" title="100以下" target="_blank">100以下</a>
+					<a href="javascript:;" title="100-200" target="_blank">100-200</a>
+					<a href="javascript:;" title="200-500" target="_blank">200-500</a>
+					<a href="javascript:;" title="500以上" target="_blank">500以上</a>
+					<a href="javascript:;" title="包邮" target="_blank">包邮</a>
+					
+				</div>
+			</div>
+			<div class="gl-header">
+				<h3><a href="javascript:;" title="礼物类型" target="_blank">礼物类型</a></h3>
+				<div class="cont">
+					<a href="javascript:;" title="送普通朋友" target="_blank">送普通朋友</a>
+					<a href="javascript:;" title="送心仪/暗恋对象" target="_blank">送心仪/暗恋对象</a>
+					<a href="javascript:;" title="送女朋友/老婆" target="_blank">送女朋友/老婆</a>
+					<a href="javascript:;" title="送男盆友/老公" target="_blank">送男盆友/老公</a>
+					<a href="javascript:;" title="送情侣" target="_blank">送情侣</a>
+					
+				</div>
+			</div>
+			
+		</div>
+		<div class="gift-right">
+			<p>按类目选礼物</p>
+			<div class="gr-bottom">
+				<div class="gr-left">
+					<div class="gl-header">
+						<h3><a href="javascript:;" title="时尚配饰" target="_blank">时尚配饰</a></h3>
+						<div class="cont">
+							<a href="javascript:;" title="项链" target="_blank">项链</a>
+							<a href="javascript:;" title="手链手镯" target="_blank">手链手镯</a>
+							<a href="javascript:;" title="戒指" target="_blank">戒指</a>
+							<a href="javascript:;" title="发饰/胸针" target="_blank">发饰/胸针</a>
+							<a href="javascript:;" title="耳钉耳环" target="_blank">耳钉耳环</a>
+							<a href="javascript:;" title="男士饰品" target="_blank">男士饰品</a>
+							<a href="javascript:;" title="高档珠宝" target="_blank">高档珠宝</a>
+						</div>
+					</div>
+					<div class="gl-header">
+						<h3><a href="javascript:;" title="布艺家纺" target="_blank">布艺家纺</a></h3>
+						<div class="cont">
+							<a href="javascript:;" title="毛绒公仔" target="_blank">毛绒公仔</a>
+							<a href="javascript:;" title="抱枕靠垫" target="_blank">抱枕靠垫</a>
+							<a href="javascript:;" title="居家服/情趣" target="_blank">居家服/情趣</a>
+							
+							
+						</div>
+					</div>
+					<div class="gl-header">
+						<h3><a href="javascript:;" title="数码办公" target="_blank">数码办公</a></h3>
+						<div class="cont">
+							<a href="javascript:;" title="记事本" target="_blank">记事本</a>
+							<a href="javascript:;" title="钢笔" target="_blank">钢笔</a>
+							<a href="javascript:;" title="手机壳" target="_blank">手机壳</a>
+							<a href="javascript:;" title="鼠标垫" target="_blank">鼠标垫</a>
+							<a href="javascript:;" title="移动电源" target="_blank">移动电源</a>
+							<a href="javascript:;" title="U盘" target="_blank">U盘</a>
+							<a href="javascript:;" title="名片夹" target="_blank">名片夹</a>
+							
+						</div>
+					</div>
+			
+					
+				</div>
+				<div class="gr-left">
+					<div class="gl-header">
+						<h3><a href="javascript:;" title="围巾配饰" target="_blank">围巾配饰</a></h3>
+						<div class="cont">
+							<a href="javascript:;" title="围巾/手套" target="_blank">围巾/手套</a>
+							<a href="javascript:;" title="钱包/背包" target="_blank">钱包/背包</a>
+							<a href="javascript:;" title="手表" target="_blank">手表</a>
+							<a href="javascript:;" title="皮带" target="_blank">皮带</a>
+							<a href="javascript:;" title="钥匙扣" target="_blank">钥匙扣</a>
+							<a href="javascript:;" title="zippo军刀" target="_blank">zippo军刀</a>
+							<a href="javascript:;" title="梳子/化妆镜" target="_blank">梳子/化妆镜</a>
+							
+						</div>
+					</div>
+					<div class="gl-header">
+						<h3><a href="javascript:;" title="花/巧克力" target="_blank">花/巧克力</a></h3>
+						<div class="cont">
+							<a href="javascript:;" title="巧克力" target="_blank">巧克力</a>
+							<a href="javascript:;" title="永生花" target="_blank">永生花</a>
+							<a href="javascript:;" title="金箔花" target="_blank">金箔花</a>
+							<a href="javascript:;" title="酒水饮料" target="_blank">酒水饮料</a>
+							<a href="javascript:;" title="卡通花/创意花束" target="_blank">卡通花/创意花束</a>
+							<a href="javascript:;" title="蜡烛/气氛配件" target="_blank">蜡烛/气氛配件</a>
+							
+						</div>
+					</div>
+					<div class="gl-header">
+						<h3><a href="javascript:;" title="照片印刷" target="_blank">照片印刷</a></h3>
+						<div class="cont">
+							<a href="javascript:;" title="照片冲印" target="_blank">照片冲印</a>
+							<a href="javascript:;" title="年历挂历" target="_blank">年历挂历</a>
+							<a href="javascript:;" title="报纸" target="_blank">报纸</a>
+							<a href="javascript:;" title="纪念册/贺卡" target="_blank">纪念册/贺卡</a>
+							<a href="javascript:;" title="扑克" target="_blank">扑克</a>
+						</div>
+					</div>
+			
+					
+				</div>
+				<div class="gr-left">
+					<div class="gl-header">
+						<h3><a href="javascript:;" title="创意摆件" target="_blank">创意摆件</a></h3>
+						<div class="cont">
+							<a href="javascript:;" title="DIY模型/拼图" target="_blank">DIY模型/拼图</a>
+							<a href="javascript:;" title="水晶摆件" target="_blank">水晶摆件</a>
+							<a href="javascript:;" title="装饰画/摆件" target="_blank">装饰画/摆件</a>
+							<a href="javascript:;" title="蜡烛/创意灯" target="_blank">蜡烛/创意灯</a>
+							<a href="javascript:;" title="音乐盒" target="_blank">音乐盒</a>
+							<a href="javascript:;" title="印章" target="_blank">印章</a>
+							<a href="javascript:;" title="汽车饰品" target="_blank">汽车饰品</a>
+							
+						</div>
+					</div>
+					<div class="gl-header">
+						<h3><a href="javascript:;" title="家居日用" target="_blank">家居日用</a></h3>
+						<div class="cont">
+							<a href="javascript:;" title="变色杯/保温杯" target="_blank">变色杯/保温杯</a>
+							<a href="javascript:;" title="遮阳伞" target="_blank">遮阳伞</a>
+							<a href="javascript:;" title="创意灯" target="_blank">创意灯</a>
+							<a href="javascript:;" title="情趣礼品" target="_blank">情趣礼品</a>
+							<a href="javascript:;" title="生活电器" target="_blank">生活电器</a>
+							<a href="javascript:;" title="碗筷锅具" target="_blank">碗筷锅具</a>
+							<a href="javascript:;" title="收纳" target="_blank">收纳</a>
+							<a href="javascript:;" title="洗漱用品" target="_blank">洗漱用品</a>
+							
+						</div>
+					</div>
+					<div class="gl-header">
+						<h3><a href="javascript:;" title="服装内衣" target="_blank">服装内衣</a></h3>
+						<div class="cont">
+							<a href="javascript:;" title="女式上衣" target="_blank">女式上衣</a>
+							<a href="javascript:;" title="情侣套装" target="_blank">情侣套装</a>
+							<a href="javascript:;" title="亲子套装" target="_blank">亲子套装</a>
+							<a href="javascript:;" title="居家内衣" target="_blank">居家内衣</a>
+						</div>
+					</div>
+			
+					
+				</div>
+				
+			</div>
 
-
-
-
-
-
-
-
-
-
-
-	</body>
+		</div>
+	</div>
+</div>
+<!--footer-->
+<div id="footer">
+	<div class="footer-top">
+		<ul>
+			<li>
+				<a class="footerbg" href="javascript:;" title="私人订制商城" target="_blank"></a>
+				<p class="ft-title"><a href="javascript:;" title="中国领先" target="_blank">中国领先</a></p>
+				<p class="ft-cont"><a href="javascript:;" title="私人订制商城" target="_blank">私人订制商城</a></p>
+			</li>
+			<li>
+				<a class="footerbg" style="background: url(img/service_8.png) 0 -49px" href="javascript:;" title="独一无二为您定制" target="_blank"></a>
+				<p class="ft-title"><a href="javascript:;" title="100%专属定制" target="_blank">100%专属定制</a></p>
+				<p class="ft-cont"><a href="javascript:;" title="独一无二为您定制" target="_blank">独一无二为您定制</a></p>
+			</li>
+			<li>
+				<a class="footerbg" style="background: url(img/service_8.png) 0 -98px" href="javascript:;" title="正品保证" target="_blank"></a>
+				<p class="ft-title"><a href="javascript:;" title="100%" target="_blank">100%</a></p>
+				<p class="ft-cont"><a href="javascript:;" title="正品保证" target="_blank">正品保证</a></p>
+			</li>
+			<li>
+				<a class="footerbg" style="background: url(img/service_8.png) 0 -147px" href="javascript:;" title="退货保证" target="_blank"></a>
+				<p class="ft-title"><a href="javascript:;" title="30天" target="_blank">30天</a></p>
+				<p class="ft-cont"><a href="javascript:;" title="退货保证" target="_blank">退货保证</a></p>
+			</li>
+			<li>
+				<a class="footerbg" style="background: url(img/service_8.png) 0 -196px" href="javascript:;" title="80%商品闪电发货" target="_blank"></a>
+				<p class="ft-title"><a href="javascript:;" title="24小时" target="_blank">24小时</a></p>
+				<p class="ft-cont"><a href="javascript:;" title="80%商品闪电发货" target="_blank">80%商品闪电发货</a></p>
+			</li>
+			<li>
+				<a class="footerbg" style="background: url(img/service_8.png) 0 -245px" href="javascript:;" title="提供礼品级包装" target="_blank"></a>
+				<p class="ft-title"><a href="javascript:;" title="精美包装" target="_blank">精美包装</a></p>
+				<p class="ft-cont"><a href="javascript:;" title="提供礼品级包装" target="_blank">提供礼品级包装</a></p>
+			</li>
+			<li>
+				<a class="footerbg" style="background: url(img/service_8.png) 0 -294px" href="javascript:;" title="口碑信赖" target="_blank"></a>
+				<p class="ft-title"><a href="javascript:;" title="199万用户" target="_blank">199万用户</a></p>
+				<p class="ft-cont"><a href="javascript:;" title="口碑信赖" target="_blank">口碑信赖</a></p>
+			</li>
+			<li>
+				<a class="footerbg" style="background: url(img/service_8.png) 0 -343px" href="javascript:;" title="货到付款" target="_blank"></a>
+				<p class="ft-title"><a href="javascript:;" title="1250城市" target="_blank">1250城市</a></p>
+				<p class="ft-cont"><a href="javascript:;" title="货到付款" target="_blank">货到付款</a></p>
+			</li>
+			
+		</ul>
+	</div>
+	<div class="footer-mid">
+		<ul>
+			<li><a href="javascript:;" title="" target="_blank">首页</a></li>
+			<li><a href="javascript:;" title="" target="_blank">商品分类</a></li>
+			<li><a href="javascript:;" title="" target="_blank">商家登录</a></li>
+			<li><a href="javascript:;" title="" target="_blank">招聘英才</a></li>
+			<li><a href="javascript:;" title="" target="_blank">联系我们</a></li>
+			<li><a href="javascript:;" title="" target="_blank">关于我们</a></li>
+			<li><a href="javascript:;" title="" target="_blank">买家帮助</a></li>
+			<li><a href="javascript:;" title="" target="_blank">手机卡当</a></li>
+			<li><a href="javascript:;" title="" target="_blank">送礼导航</a></li>
+		</ul>
+	</div>
+	<div class="copy">Copyright © 2006-2014 kadang.com 网上经营许可证号：浙B2-20140235 </div>
+</div>
+</body>
 </html>
+
+<script>
+		var oTex=document.getElementById("text");
+		var oList=document.getElementById("list");
+		var btn = document.getElementById("btn");
+		oTex.onkeyup=function(){
+			var val=this.value;
+			var oScript=document.createElement("script");
+			oScript.src="https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd=" 
+			+ val + "&cb=hhll";
+			document.body.appendChild(oScript);
+			document.body.removeChild(oScript);
+		}
+		function hhll(data){
+			//console.log(data);//obj
+			//alert(data.s[0]);//第一项
+			var html="";
+			if(data.s.length>0){
+				for(var i=0;i<data.s.length;i++){
+					html+= '<li><a href="https://www.baidu.com/s?wd=' 
+					+ data.s[i] + '" target="_blank">' + data.s[i] + '</a></li>'
+				}
+				oList.style.display="block";
+				oList.innerHTML=html;
+			}else{
+				oList.style.display="none";
+			}	
+		}
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

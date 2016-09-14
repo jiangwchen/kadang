@@ -15,6 +15,7 @@
 	width:150px;
 	height:460px;
 	position: relative;
+	float:left;
 }
 
 .fc-left .fc-left-t{
@@ -61,12 +62,21 @@
 	height:31px;
 	line-height: 31px;
 	font-size:14px;
-	
+}
+.fc-left .fc-left-b li i{
+	height:31px;
+	display: none;
+	line-height: 31px;
+	float:right;
+	font-size:18px;
 }
 .fc-left .fc-left-b li.active{
 	color: #fff;
 	background: rgb(228,71,21);
 	
+}
+.fc-left .fc-left-b li.active i{
+	display: block;
 }
 .fc-left .fc-left-b li.active a{
 	color:#fff;
@@ -82,17 +92,24 @@
 	height:460px;
 	padding:20px;
 	border:1px solid rgb(237,237,237);
-	z-index: 4;
-	background: rgba(228,71,21,0.3);
+	z-index: 10;
+	background: rgba(255,255,255,0.7);
 	display: none;
 }
 .fc-left .fc-left-b li .erjimenu a{
+	height:21px;
+	line-height: 21px;
 	display: block;
 	padding:0 10px;
 	font-size: 12px;
 	color:rgb(102,102,102);
+	margin-bottom: 15px;
+	padding-left: 15px;
 }
-
+.fc-left .fc-left-b li .erjimenu a.on{
+	background: rgb(153,153,153);
+	color:#fff;
+}
 .fc-left .fc-left-b span{
 	margin-left:15px;
 }
@@ -100,6 +117,482 @@
 	margin-left: 7px;
 	color:rgb(102,102,102)
 }
+/**轮播图**/
+#fc-mid{
+	width:820px;
+	height:460px;
+	overflow: hidden;
+	position: relative;
+	float:left;
+	margin-left:20px;
+	
+}
+#fc-mid .lunbo{
+	height:460px;
+}
+#fc-mid .lunbo li{
+	position: absolute;
+	height:460px;
+	width:820px;
+	opacity:1;
+}
+#fc-mid .lunbo li.active{
+	z-index: 2;
+}
+#fc-mid .bottom{
+	width:92px;
+	height:18px;
+	position:absolute;
+	bottom: 10px;
+	left:50%;
+	margin-left:-46px;
+	z-index:3;
+}
+#fc-mid .bottom li{
+	height:11px;
+	border-radius: 9px;
+	background:rgb(117,117,117);
+	float:left;
+	width:11px;
+	margin:0 6px;
+}
+#fc-mid .bottom li.cur{
+	background:rgb(222,84,41);
+}
+#fc-mid .prev{
+	position:absolute;
+	background: url(../img/prev.jpg) no-repeat ;
+	top:50%;
+	margin-top:-33px;
+	left:100px;
+	width:73px;
+	height:66px;
+	filter:alpha(opacity=40);
+	opacity: 0.4;
+	z-index: 3;
+	display: none;
+}
+#fc-mid .next{
+	position:absolute;
+	background: url(../img/prev.jpg) no-repeat 0 -67px;
+	top:50%;
+	margin-top:-33px;
+	right:100px;
+	width:73px;
+	height:66px;
+	filter:alpha(opacity=40);
+	opacity: 0.4;
+	z-index: 3;
+	display: none;
+}
+#fc-right{
+	float:left;
+	width:190px;
+	height:460px;
+	margin-left:20px;
+}
+#fc-right .mod-above{
+	margin-bottom:20px;
+	width:190px;
+	height:220px;
+}
+#fc-right .mod-blow{
+	width:190px;
+	height:220px;
+}
+/**爆款推荐  f-container-mid**/
+#f-container-mid{
+	width:1200px;
+	height:751px;
+	margin:8px auto;
+	margin-top:40px;
+	margin-bottom: 10px;
+	position:relative;
+	
+}
+#f-container-mid h2{
+	min-width: 900px;
+	height:45px;
+	padding-bottom: 15px;
+}
+#f-container-mid h2 b{
+	font-size: 20px;
+	color:#000;
+}
+#f-container-mid h2 span{
+	font-size: 12px;
+	color:rgb(153,153,153);
+	margin-left:10px;	
+}
+#f-container-mid #hotest{
+	width:1220px;
+	height:716px;
+	margin:0 auto;
+	overflow: hidden;
+}
+#hotest li{
+	float:left;
+	position: relative;
+	margin-right:20px;
+	margin-bottom: 20px;
+}
+#hotest li .side-header{
+	position: absolute;
+	top:0;
+	left: 15px;
+}
+#hotest li span{
+	display: block;
+	width:285px;
+	height:34px;
+	padding: 10px 0 5px 0;
+	font-size:12px;
+	color:rgb(102,102,102)
+}
+#hotest li span b{
+	
+	font-size:18px;
+	color:#666;
+}
+#hotest li span a{
+	font-size:12px;
+	float:right;
+	color:rgb(102,102,102)
+}
+#hotest li p a{
+	font-size:16px;
+	color:rgb(102,102,102);
+	font-family: "微软雅黑";
+}
+#hotest li p a:hover{
+	color:rgb(242,94,75);
+}
+#hotest li a img{
+	width:285px;
+	height:280px;
+}
+#f-container-bottom{
+	margin:0 auto;
+	width:1200px;
+	height:120px;
+	
+}
+#f-container-bottom img{
+	float:left;
+}
+#f-container-bottom .lovebg{
+	width:190px;
+	height:120px;
+	margin-left:20px;
+}
+/***楼层开始***/
+#subnav{
+	width:1200px;
+	height:46px;
+	
+	margin:0 auto;
+	margin-top:25px;
+}
+#subnav li a{
+	width:128px;
+	height:46px;
+	float:left;
+	line-height: 46px;
+	text-align: center;
+	margin-right: 3px;
+	display: block;
+	font-weight: bold;
+	font-size:14px;
+	color:rgb(102,102,102);
+	outline: none;
+}
+#subnav .first{
+	color:#fff;
+	font-weight: bold;
+	background:rgb(228,71,21);
+}
+#subnav li a:hover{
+	background:rgb(228,71,21);
+	color:#fff;
+	font-weight: bold;
+}
+/***楼层nav****/
+#floor-nav{
+	width:100%;
+	height:46px;
+	background: #fff;
+	display:none;
+	position:fixed;
+	top:0;
+	z-index: 100;
+}
+#floor-nav ul{
+	width:1200px;
+	height:46px;
+	margin:0 auto;
+}
+#floor-nav li a{
+	width:128px;
+	height:46px;
+	float:left;
+	line-height: 46px;
+	text-align: center;
+	margin-right: 3px;
+	display: block;
+	font-weight: bold;
+	font-size:14px;
+	color:rgb(102,102,102);
+	outline: none;
+}
+
+#floor-nav li a.active{
+	background:rgb(228,71,21);
+	color:#fff;
+	font-weight: bold;
+}
+#floor-nav li a.cur{
+	color:#fff;
+	font-weight: bold;
+	background:rgb(228,71,21);
+}
+
+#floor{
+	width:100%;
+	height:auto;
+	background: rgb(245,245,245);
+	padding-bottom: 50px;
+}
+#floor .f-first{
+	width:1200px;
+	height:1253px;/**还没算上h3标签的高度**/
+	margin:0 auto;
+	overflow: hidden;
+}
+#floor .f-first h3{
+	width:1200px;
+	height:68px;
+	line-height: 68px;
+}
+#floor .f-first h3 a{
+	font-size:28px;
+	font-family: "微软雅黑";
+	color:#000;
+}
+#floor .f-first ul{
+	width:1300px;
+	height:1185px;
+}
+#floor .f-first li{
+	float:left;
+	width:280px;
+	height:369px;
+	position: relative;
+	border-right:2px solid rgb(220,220,220);
+	border-bottom: 2px solid rgb(220,220,220);
+	background: #fff;
+	margin:0 26px 26px 0;
+}
+#floor .f-first li:hover{
+	border-right-color:rgb(173,173,173);
+	border-bottom-color: rgb(173,173,173);
+}
+
+
+#floor .f-first li a img{
+	width:278px;
+	height: 280px;
+}
+#floor .f-first .cake{
+	width:586px;
+	height:369px;
+}
+#floor .f-first .cake a img{
+	width:584px;
+	height:367px;
+}
+#floor .f-first li .side-header{
+	position: absolute;
+	top:0;
+	left: 15px;
+}
+#floor .f-first li s{
+	display: block;
+	width:246px;
+	height:24px;
+	line-height: 24px;
+	margin:0 auto;
+	color:rgb(153,153,153)
+}
+#floor .f-first li span{
+	display: block;
+	width:246px;
+	height:27px;
+	font-size:12px;
+	color:rgb(102,102,102);
+	margin:0 auto;
+}
+#floor .f-first li span b{
+	font-size:20px;
+	font-family:"宋体";
+	color:#666;
+	font-weight:normal ;
+}
+#floor .f-first li span a{
+	font-size:12px;
+	float:right;
+	margin-top:5px;
+}
+#floor .f-first li span a:hover{
+	color:rgb(242,94,75);
+}
+#floor .f-first li p{
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	color:#999;
+	font-family: "宋体";
+	width:246px;
+	height: 22px;
+	line-height: 22px;
+	margin:0 auto;
+}
+/**giftClassify**/
+#giftClassify{
+	width:1202px;
+	height:504px;
+	margin:0 auto;
+	background:#fff;
+	padding:26px 0;
+}
+#giftClassify .gift-left{
+	width:321px;
+	height:450px;
+	padding-left:20px;
+	border-right:1px solid rgb(204,204,204);
+	float:left;
+}
+#giftClassify .gift-left p{
+	width:300px;
+	height:50px;
+	font-size:20px;
+	font-weight: bold;
+	padding-top:20px ;
+	font-family: "微软雅黑";
+}
+.gift-left .gl-header{
+	width:300px;
+	height:95px;
+	padding:12px 0;
+}
+.gift-left .gl-header h3{
+	height:28px;
+	line-height:20px;
+}
+.gift-left .gl-header h3 a{
+	font-size:14px;
+	font-weight: bold;
+	color:#000;
+}
+.gift-left .gl-header h3 a:hover{
+	color:rgb(244,97,77)
+}
+.gift-left .gl-header .cont{
+	height:43px;
+	line-height: 20px;
+}
+.gift-left .gl-header .cont a{
+	color:rgb(153,153,153);
+	font:12px/1.5 "宋体";
+	margin-right:16px ;
+	white-space: nowrap;
+}
+.gift-left .gl-header .cont a:hover{
+	color:rgb(244,97,77)
+}
+/***********************/
+#giftClassify .gift-right{
+	width:870px;
+	height:377px;
+	padding-left:20px;
+	float:left;
+}
+
+#giftClassify .gift-right p{
+	width:870px;
+	height:50px;
+	font-size:20px;
+	font-weight: bold;
+	padding-top:20px ;
+	font-family: "微软雅黑";
+}
+#giftClassify .gift-right .gr-bottom{
+	width:870px;
+	height:327px;
+}
+.gr-bottom .gr-left{
+	width:270px;
+	height:109px;
+	float:left;
+}
+.gr-bottom .gr-left .gl-header{
+	width:270px;
+	height:109px;
+	padding:12px 0;
+}
+.gr-bottom .gr-left .gl-header h3{
+	height:28px;
+	line-height:20px;
+}
+.gr-bottom .gr-left .gl-header h3 a{
+	font-size:14px;
+	font-weight: bold;
+	font-family: "宋体";
+	color:#000;
+}
+.gr-bottom .gr-left .gl-header h3 a:hover{
+	color:rgb(244,97,77)
+}
+.gr-bottom .gr-left .gl-header .cont{
+	height:43px;
+	line-height: 20px;
+}
+.gr-bottom .gr-left .gl-header .cont a{
+	color:rgb(153,153,153);
+	font:12px/1.5 "宋体";
+	padding-right:10px ;
+	white-space: nowrap;
+}
+.gr-bottom .gr-left .gl-header .cont a:hover{
+	color:rgb(244,97,77)
+}
+/******楼层结束*****/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
